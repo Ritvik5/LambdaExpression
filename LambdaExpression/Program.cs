@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To Lambda Expression!!!");
+            Console.WriteLine("Welcome To Lambda Expression!!!\n");
+
+            StudentDataMangement.AddStudentData();
         }
     }
 }
