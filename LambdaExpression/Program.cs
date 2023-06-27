@@ -9,7 +9,8 @@
             List<Student> students = new List<Student>();
             StudentDataMangement.AddStudentData(students);
             //StudentDataMangement.DisplayStudentData(students);
-            StudentDataMangement.RetrieveBetweenRange(students);
+            //StudentDataMangement.RetrieveBetweenRange(students);
+            StudentDataMangement.OrderByAge(students);
         }
     }
 }
