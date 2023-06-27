@@ -8,9 +8,8 @@ namespace LambdaExpression
 {
     public class StudentDataMangement
     {
-        public static void AddStudentData()
+        public static void AddStudentData(List<Student> studentList)
         {
-            List<Student> studentList = new List<Student>();
             studentList.Add(new Student(1, "Pot", "9999900000", "Bangalore", 25));
             studentList.Add(new Student(2, "Tom", "9638527410", "Mangalore", 15));
             studentList.Add(new Student(3, "Carl", "8527419630", "Delhi", 11));
@@ -21,11 +20,20 @@ namespace LambdaExpression
             studentList.Add(new Student(8, "Snow", "8700000000", "Kanpur", 17));
             studentList.Add(new Student(9, "John", "8700001234", "Agra", 19));
             studentList.Add(new Student(10, "Bean", "8700001234", "Dehradun", 20));
-
+        }
+        public static void DisplayStudentData(List<Student> studentList)
+        {
             foreach (Student student in studentList)
             {
                 Console.WriteLine($"Student with ID is: {student.Id} ,Name: {student.Name} ,PhoneNumber: {student.PhoneNumber} ,Address: {student.Address} ,Age: {student.Age}");
             }
         }
+        public static void RetrieveBetweenRange(List<Student> studentList)
+        {
+            foreach(Student student in studentList.FindAll(x => x.Age >= 12 && x.Age <= 18))
+            {
+                Console.WriteLine($"Student with ID is: {student.Id} ,Name: {student.Name} ,PhoneNumber: {student.PhoneNumber} ,Address: {student.Address} ,Age: {student.Age}");
+            }
+        }  
     }
 }
