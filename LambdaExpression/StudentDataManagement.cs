@@ -10,7 +10,7 @@ namespace LambdaExpression
     {
         public static void Display(Student student)
         {
-            Console.WriteLine($"Student with ID is: {student.Id} ,Name: {student.Name} ,PhoneNumber: {student.PhoneNumber} ,Address: {student.Address} ,Age: {student.Age}");
+            Console.WriteLine($"Student with ID is: {student.Id} ,Name: {student.Name} ,PhoneNumber: {student.PhoneNumber} ,Address: {student.Address} ,Age: {student.Age}\n");
         }
         public static void AddStudentData(List<Student> studentList)
         {
@@ -45,6 +45,14 @@ namespace LambdaExpression
             foreach (Student student in studentList.OrderByDescending(x => x.Age))
             {
                 Display(student);
+            }
+        }
+
+        public static void RetrievingDataByAddressAndName(List<Student> studentList)
+        {
+            foreach(Student student in studentList)
+            {
+                Console.WriteLine("Name of Student: "+student.Name+" And Address is : "+student.Address);
             }
         }
     }
