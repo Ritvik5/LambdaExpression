@@ -12,7 +12,8 @@
             //StudentDataMangement.RetrieveBetweenRange(students);
             //StudentDataMangement.OrderByAge(students);
             //StudentDataMangement.RetrievingDataByAddressAndName(students);
-            StudentDataMangement.RetrievingFirstThreeRecords(students);
+            //StudentDataMangement.RetrievingFirstThreeRecords(students);
+            StudentDataMangement.SearchForParticularName(students);
         }
     }
 }

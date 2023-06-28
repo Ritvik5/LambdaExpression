@@ -63,5 +63,13 @@ namespace LambdaExpression
                 Display(student);
             }
         }
+
+        public static void SearchForParticularName(List<Student> studentList)
+        {
+            foreach(Student student in studentList.FindAll(x => x.Name == "Pot"))
+            {
+                Display(student);
+            }
+        }
     }
 }
